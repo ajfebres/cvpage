@@ -1,0 +1,57 @@
+extends layout
+
+block content
+    link(rel='stylesheet', href='../../stylesheets/projectform.css')
+    div.container
+        div.row
+            div.card.s12.xl12.white
+                div.row.container
+                    form.col.s12.xl12(action="/projects/edit/"+_id+'?_method=PUT', method="POST", enctype="multipart/form-data")
+                        input(type="hidden", name="_method")
+                        div.row
+                            div.input-field.col.s12.xl12
+                                input(disabled, value=_id, id="disabled" type="text")
+                                label(for="disabled") ID
+                        div.row
+                            div.input-field.col.s12.xl12
+                                i.fas.fa-tasks.fa-xs.prefix
+                                input.validate(id="title" type="text", name="title", value=title)
+                                label(for="title") Title
+                        div.row
+                            div.input-field.col.s12.xl12
+                                i.fas.fa-pen.fa-xs.prefix
+                                textarea.materialize-textarea(id="description", name="description")= description
+                                label(for="description") Description
+                        div.row
+                            div.file-field.input-field
+                                div.btn.waves-effect.waves-light.btn.light-blue.darken-4
+                                    span Files
+                                    input(type="file" multiple name="images")
+                                div.file-path-wrapper
+                                    input.file-path.validate(type="text" placeholder="Upload one or more files")
+                        div.row.right
+                            div.col.s12.xl12
+                                button.waves-effect.waves-light.btn.light-blue.darken-4(type="submit") Update
+                                    i.fas.fa-plus.right
+                                a.waves-effect.waves-light.btn.blue-grey.darken-2(href="/projects") Exit
+                                    i.fas.fa-door-open.right
+                div.container
+                    div.s12.xl12
+                        table.centered.highlight
+                            thead
+                                tr
+                                    th Image
+                                    th Options
+                            tbody
+                                each image in images
+                                    tr
+                                        td.xl2
+                                            img.responsive-img(src=image.imageURI, alt="Image")
+                                        td
+                                            a.btn.transparent.light-blue-text.text-darken-4.right.z-depth-0(href= image.imageURI target="_blank")
+                                                i.far.fa-window-maximize
+                                            form(action="/projects/image/"+image._id+"?_method=DELETE", method="POST")
+                                                input(type="hidden", name="_method")
+                                                button.btn.transparent.red-text.text-darken-4.right.z-depth-0(type="submit")
+                                                    i.fas.fa-trash
+    scriptass(src="../../javascripts/projectedit.js")

@@ -1,0 +1,89 @@
+body {
+  padding-top: 10px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url('../images/background.jpg');
+}
+
+span.name {
+  font-style: italic;
+}
+span.email{
+  font-style: italic;
+}
+
+div.card {
+  border-radius: 20px;
+  padding: 5px;
+  opacity: 0.8;
+}
+
+div.footer-menu {
+  margin-top:100px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+div.row-right{
+  float: right;
+  width: 950px;
+  margin:0;
+}
+
+div.card-item {
+  opacity: 1;
+  margin-top:5px;
+  font-size: 18px;
+  font-style: italic;
+}
+
+div.header-item {
+  opacity: 0.8;
+  height: 40px;
+  margin-top: 10px;
+  padding-left:40px;
+  padding-top: 5px;
+  font-size: 25px;
+  border-radius: 25px;
+  
+}
+
+img.greet-logo {
+  width: 90px;
+  height: 90px;
+}
+
+div.collapsible-body {
+  font-size: 16px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px 
+}
+div.collapsible-header i{
+  color: #ff7043;
+}
+div.collapsible-header span {
+  font-size: 18px;
+}
+
+div.collapsible-header{
+  background-color: transparent;
+}
+
+div.collapsible-div {
+  border-radius: 25px;
+  opacity: 0.8;
+}
+div.greet {
+  opacity: 0.8;
+  margin-top: 10px;
+  padding-left:40px;
+  padding-top: 20px;
+  padding-right: 25px;
+  padding-bottom: 20px;
+  font-size: 16px;
+  border-radius: 25px;
+  text-align: justify;
+}
+div.footer-link {
+  padding: 5px 0px 5px 0px;
+  border-radius: 5px;
+  
+}

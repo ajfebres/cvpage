@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    link(rel='stylesheet', href='../stylesheets/sign.css')
+    div.container
+        div.row
+            div.col.s12.xl6.offset-xl3
+                div.card.white.center
+                    div.card-content
+                        img.circle.white.z-depth-3(src="../images/logo.svg")
+                        h5.light-blue-text.text-darken-4 Sign In
+                        div.row
+                            div.col.s12.xl12
+                                each e in error
+                                    div.chip.white-text.red.darken-4.xl12= error
+                                        i.close.fas.fa-times
+                            form.cols12.xl12.card-content-form(action="/users/signin", method="POST")
+                                div.input-field.col.s12.xl12
+                                    i.fas.fa-user-circle.prefix
+                                    input#email.validate(type="email", name="email")
+                                    label(for="email") Email
+                                div.input-field.col.s12.xl12
+                                    i.fas.fa-key.prefix
+                                    input#password.validate(type="password", name="password")
+                                    label(for="password") Password
+                                div.row
+                                    a.waves-effect.waves-light.btn-flat.white.light-blue-text.text-darken-4.right(href="/users/signup") I don't have Account
+                                    button.waves-effect.waves-light.btn.white-text.light-blue.darken-4.right(type="submit") Sign in

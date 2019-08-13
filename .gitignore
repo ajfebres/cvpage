@@ -59,3 +59,11 @@ typings/
 
 # next.js build output
 .next
+
+# Node Modules
+
+/node_modules/
+
+# db local
+
+/db/

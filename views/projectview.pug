@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    link(rel='stylesheet', href='../../stylesheets/projectform.css')
+    div.container
+        div.row
+            div.card.s12.xl12.white
+                div.row
+                    div.carousel.carousel-slider
+                        each i in images
+                            a.carousel-item(href=i.imageURI, target="_blank")
+                                img(src=i.imageURI)
+                div.row.center
+                    h3= title
+                    p= description
+                    a.btn.transparent.blue-grey-text.text-darken-2.z-depth-0.right(href="/projects") Exit
+                        i.fas.fa-door-open.right
+    script(src="../../javascripts/projectedit.js")
+        

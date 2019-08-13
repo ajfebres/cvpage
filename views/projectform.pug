@@ -1,0 +1,34 @@
+extends layout
+
+block content
+    link(rel='stylesheet', href='../stylesheets/projectform.css')
+    div.container
+        div.row
+            div.card.s12.xl12.white
+                div.col.s12.xl12.card-title-center.light-blue-text.text-darken-4
+                    h3 Create a Project
+                div.row.container
+                    form.col.s12.xl12(action="/projects/new", method="POST", enctype="multipart/form-data")
+                        div.row
+                            div.input-field.col.s12.xl12
+                                i.fas.fa-tasks.fa-xs.prefix
+                                input.validate(id="title" type="text", name="title")
+                                label(for="title") Title
+                        div.row
+                            div.input-field.col.s12.xl12
+                                i.fas.fa-pen.fa-xs.prefix
+                                textarea.materialize-textarea(id="description" name="description")
+                                label(for="description") Description
+                        div.row
+                            div.file-field.input-field
+                                div.btn.waves-effect.waves-light.btn.light-blue.darken-4
+                                    span Files
+                                    input(type="file" multiple name="images")
+                                div.file-path-wrapper
+                                    input.file-path.validate(type="text" placeholder="Upload one or more files")
+                        div.row.right
+                            div.col.s12.xl12
+                                button.waves-effect.waves-light.btn.light-blue.darken-4(type="submit") Create
+                                    i.fas.fa-plus.right
+                                a.waves-effect.waves-light.btn.white.blue-grey-text.text-darken-2.z-depth-0(href="/projects") Exit
+                                    i.fas.fa-door-open.right

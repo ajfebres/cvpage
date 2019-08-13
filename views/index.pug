@@ -1,0 +1,190 @@
+extends layout
+
+block content
+  link(rel="stylesheet", href="stylesheets/index.css")
+  div.col.s12.m12.xl3
+    ul.sidenav.sidenav-fixed(id="slide-out")
+      li
+        div.user-view
+            div.background.deep-orange.lighten-1
+            a(href="#user")
+            img.circle.deep-orange.lighten-3.z-depth-3(src="images/logo.svg")
+            a(href="#!") 
+            span.white-text.name Abraham Jesús
+            a(href="#!")
+            span.white-text.email febresaj@gmail.com
+      li
+        a.waves-effect(href="/#skills") Skills
+            i.small.fas.fa-code
+      li
+        a.waves-effect(href="/projects") Projects
+            i.small.fas.fa-flask
+      li
+        div.divider
+      li
+        a.subheader About me
+      li
+        a.waves-effect(href="/#aboutme") About me
+            i.small.fas.fa-male
+      li
+        div.row.footer-menu
+          div.col.s4
+            a.btn-floating.btn-large.deep-orange.lighten-1.pulse(href='#!')
+              i.fab.fa-github
+          div.col.s4
+            a.btn-floating.btn-large.deep-orange.lighten-1.pulse(href='#!')
+              i.fab.fa-linkedin-in
+          div.col.s4
+            a.btn-floating.btn-large.deep-orange.lighten-1.pulse(href='#!')
+              i.fab.fa-twitter
+  div.row
+    div.col.s12.m12.xl3
+      a.sidenav-trigger.btn-floating.btn-large.deep-orange.lighten-1.pulse(href="#" data-target="slide-out")
+        i.fas.fa-list
+    div.col.s12.m12.xl9
+      div.row
+        div.col.s12.m12.xl12
+          div.grey.lighten-4.z-depth-3.header-item(id="skills")
+            span Skills
+      div.row
+        div.col.s12.m12.xl3
+          div.card.grey.lighten-4.z-depth-3
+            div.center.deep-orange-text.text-lighten-1
+              i.fas.fa-toolbox.fa-5x
+            div.card-content
+              span.card-title.grey-text.text-darken-4.center Tools
+              div.row
+                div.col.s4
+                  i.fab.fa-python.fa-2x
+                div.col.s8.card-item
+                  span.left Python
+              div.row
+                div.col.s4
+                  i.fab.fa-node-js.fa-2x
+                div.col.s8.card-item
+                  span NodeJs
+              div.right
+                span.btn-floating.btn-large.deep-orange.activator.white-text
+                  i.fas.fa-plus
+            div.card-reveal
+              div.row
+                div.col.s4
+                  i.fas.fa-terminal.fa-2x
+                div.col.s5.card-item
+                  span.left Shell
+                div.col.s3
+                  span.btn-floating.btn-small.deep-orange.white-text.card-title
+                    i.fas.fa-times
+              div.row
+                div.col.s4
+                  i.fas.fa-fill-drip.fa-3x
+                div.col.s8.card-item
+                  div
+                    span Materialize
+                  div  
+                    span Foundation
+                  div
+                    span Bootstrap
+              div.row
+                div.col.s4
+                  i.fab.fa-js-square.fa-2x
+                div.col.s8.card-item
+                  span Jquery/Js
+                
+        div.col.s12.m12.xl3
+          div.card.grey.lighten-4.z-depth-3
+            div.center.deep-orange-text.text-lighten-1
+              i.fas.fa-cloud.fa-5x
+            div.card-content
+              span.card-title.grey-text.text-darken-4.center Cloud
+              div.row
+                div.col.s4
+                  i.fab.fa-aws.fa-2x
+                div.col.s8.card-item
+                  span.left AWS
+              div.row
+                div.col.s4
+                  i.fab.fa-digital-ocean.fa-2x
+                div.col.s8.card-item
+                  span DigitalOcean
+              div.row
+                div.col.s4
+                  i.fas.fa-cloud.fa-2x
+                div.col.s8.card-item
+                  span Heroku
+
+        div.col.s12.m12.xl3
+          div.card.grey.lighten-4.z-depth-3
+            div.center.deep-orange-text.text-lighten-1
+              i.fas.fa-database.fa-5x
+            div.card-content
+              span.card-title.grey-text.text-darken-4.center Data
+              div.row
+                div.col.s4
+                  i.fas.fa-database.fa-2x
+                div.col.s8.card-item
+                  span.left PostgreSQL
+              div.row
+                div.col.s4
+                  i.fas.fa-database.fa-2x
+                div.col.s8.card-item
+                  span MongoDB
+
+        div.col.s12.m12.xl3
+          div.card.grey.lighten-4.z-depth-3
+            div.center.deep-orange-text.text-lighten-1
+              i.fas.fa-clipboard-list.fa-5x
+            div.card-content
+              span.card-title.grey-text.text-darken-4.center Other
+              div.row
+                div.col.s4
+                  i.fab.fa-git-alt.fa-2x
+                div.col.s8.card-item
+                  span.left GIT
+              div.row
+                div.col.s4
+                  i.fas.fa-sitemap.fa-2x
+                div.col.s8.card-item
+                    span OdooERP
+              div.row
+                div.col.s4
+                  i.fas.fa-robot.fa-2x
+                div.col.s8.card-item
+                  span RPA UIPath             
+      div.row
+        div.col.s12.xl12
+          div.grey.lighten-4.z-depth-3.header-item(id="aboutme")
+            span About me
+      div.row
+        div.col.s12.m12.xl7
+          div.grey.lighten-4.z-depth-3.greet
+            div.row
+              div.col.s12.xl3.center
+                img.img-responsive.circle.greet-logo(src='images/logo.svg')
+              div.col.s12.xl9
+                span= greet
+                br
+                span From Venezuela to the world!!!
+        div.col.s12.m12.xl5
+          div.collapsible-div.grey.lighten-4.z-depth-3
+            ul.collapsible.popout
+              li.z-depth-0
+                div.collapsible-header
+                  i.fas.fa-futbol
+                  span Hobbies
+                div.collapsible-body.grey.lighten-4.black-text
+                  span= hobbies
+              li.z-depth-0
+                div.collapsible-header
+                  i.fas.fa-user-tie
+                  span Experience
+                div.collapsible-body.grey.lighten-4.black-text
+                  span= exp
+              li.z-depth-0
+                div.collapsible-header
+                  i.fas.fa-book
+                  span Studies
+                div.collapsible-body.grey.lighten-4.black-text
+                  span= studies
+  script(src="javascripts/index.js")
+

@@ -1,0 +1,40 @@
+body {
+    background: #F09819;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EDDE5D, #F09819);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EDDE5D, #F09819); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+div.card-title-center {
+    margin: auto;
+    text-align: center;
+}
+
+div.card {
+    border-radius: 25px;
+    margin-top: 100px; 
+}
+
+.card-content img {
+  max-width: 80px;
+  max-height: 80px;
+}
+
+.card-content-form {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+   /* label focus color */
+   .input-field input:focus + label {
+     color: #01579b !important;
+   }
+   /* label underline focus color */
+   .input-field input:focus {
+     border-bottom: 1px solid #01579b !important;
+     box-shadow: 0 1px 0 0#01579b !important;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #01579b;
+   }
